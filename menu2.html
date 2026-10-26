@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html><head><title> menu2 page-제작:2435005 오채현</title>
 <script>
+    var sum=0; //전역변수 선언
+    function calc(cBox) {
+        if(cBox.checked)
+        sum = sum + parseInt(cBox.value);
+    else
+        sum = sum - parseInt(cBox.value);
+    document.getElementById("sumtext").value = sum;
+        }
+    
     function query() {
         var ret = confirm("네이버로 이동하시겠습니까?");
         return ret; // confirm()의 리턴 값은 true 또는 false
